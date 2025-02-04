@@ -1,0 +1,142 @@
+[
+  {
+    "id": 1,
+    "name": "Sergel",
+    "genericName": "Omeprazole 20mg",
+    "description": "Effective for stomach acid relief.",
+    "imgUpload": null,
+    "imgUrl": "https://cdn2.arogga.com/eyJidWNrZXQiOiJhcm9nZ2EiLCJrZXkiOiJQcm9kdWN0LXBfaW1hZ2VzXC8xNzMzNVwvMTczMzUtU2VyZ2VsLWRwMmR1Ni5qcGVnIiwiZWRpdHMiOltdfQ==",
+    "category": "medicine",
+    "company": "Square Pharmaceuticals",
+    "unit": "20mg",
+    "unitPrice": 35,
+    "discountPercentage": 12.5,
+    "available": 10,
+    "newPrice": 30.63
+
+  },
+  {
+    "id": 2,
+    "name": "Baby Lotion",
+    "genericName": "Aloe Vera and Vitamin E",
+    "description": "Gentle lotion for baby’s sensitive skin.",
+    "imgUpload": null,
+    "imgUrl": "https://cdn2.arogga.com/eyJidWNrZXQiOiJhcm9nZ2EiLCJrZXkiOiJQcm9kdWN0LXBfaW1hZ2VzXC82OTQ3MlwvNjk0NzItTWVyaWwtQmFieS1Mb3Rpb24tMjAwbWwtRnJlZS1NZXJpbC1iYWJ5LUdlbC10b290aHBhc3RlLTIwZ20tY29weS1zYWNjemEuanBlZyIsImVkaXRzIjpbXX0=",
+    "category": "baby-and-mom-care",
+    "company": "Incepta",
+    "unit": "200ml",
+    "unitPrice": 45,
+    "discountPercentage": 10,
+    "available": 10,
+    "newPrice": 40.5
+
+  },
+  {
+    "id": 3,
+    "userEmail":"hridoybhuyan2001@gmail.com",
+    "name": "Vitamin C Tablets",
+    "genericName": "Ascorbic Acid 500mg",
+    "description": "Boosts immunity and skin health.",
+    "imgUpload": null,
+    "imgUrl": "https://cdn2.arogga.com/eyJidWNrZXQiOiJhcm9nZ2EiLCJrZXkiOiJQcm9kdWN0LXBfaW1hZ2VzXC82NzQ5MVwvNjc0OTEtVW50aXRsZWQtZGVzaWduLTM4LTAzenFpZi5qcGVnIiwiZWRpdHMiOltdfQ==",
+    "category": "supplement",
+    "company": "Opsonin Pharma",
+    "unit": "500mg",
+    "unitPrice": 18,
+    "discountPercentage": 10,
+    "available": 10,
+    "newPrice": 16.2
+
+
+  },
+  {
+    "id": 4,
+    "userEmail":"hridoybhuyan2001@gmail.com",
+    "name": "Dog Food",
+    "genericName": "High Protein Dog Food",
+    "description": "Nutritional food for adult dogs.",
+    "imgUpload": null,
+    "imgUrl": "https://cdn2.arogga.com/eyJidWNrZXQiOiJhcm9nZ2EiLCJrZXkiOiJtZWRpY2luZVwvNTlcLzU5MzMxLURyb29scy1QdXBweS1Eb2ctRm9vZC1DaGlja2VuLUVnZy0za2ctRnJlZS03MDBnbS0za2ctZTYwYi5qcGVnIiwiZWRpdHMiOltdfQ==",
+    "category": "pet-care",
+    "company": "Beximco Pharma",
+    "unit": "2kg",
+    "unitPrice": 22,
+    "discountPercentage": 12,
+    "available": 10,
+    "newPrice": 19.36
+
+
+  },
+  {
+    "id": 5,
+    "userEmail":"hridoybhuyan2001@gmail.com",
+    "name": "Herbal Green Tea",
+    "genericName": "Camellia Sinensis",
+    "description": "Promotes relaxation and digestion.",
+    "imgUpload": null,
+    "imgUrl": "https://cdn2.arogga.com/eyJidWNrZXQiOiJhcm9nZ2EiLCJrZXkiOiJtZWRpY2luZVwvNTRcLzU0Mzc5LUdyZWVuLVRlYS1Fc3NlbnRpYWwtT2lsLVJvbmdvbi0xMG1sLXd5eTkuanBlZyIsImVkaXRzIjpbXX0=",
+    "category": "herbal",
+    "company": "Popular Pharmaceuticals",
+    "unit": "10 bags",
+    "unitPrice": 12,
+    "discountPercentage": 20,
+    "available": 10,
+    "newPrice": 9.6
+
+
+  },
+  {
+    "id": 6,
+    "userEmail":"hridoybhuyan2001@gmail.com",
+    "name": "Moisturizing Cream",
+    "genericName": "Shea Butter and Glycerin",
+    "description": "Keeps skin hydrated and smooth.",
+    "imgUpload": null,
+    "imgUrl": "https://cdn2.arogga.com/eyJidWNrZXQiOiJhcm9nZ2EiLCJrZXkiOiJtZWRpY2luZVwvMzVcLzM1MTYxLUhlYWx0aHktU2hvcC1QYXJpcy1Xcmlua2xlLU1vaXN0dXJpemluZy1DcmVhbS1FbmpveU1hcnRCRC03cTNrOWoucG5nIiwiZWRpdHMiOltdfQ==",
+    "category": "beauty",
+    "company": "Sk+F",
+    "unit": "150ml",
+    "unitPrice": 28,
+    "discountPercentage": 15,
+    "available": 10,
+    "newPrice": 23.8
+
+
+  },
+  {
+    "id": 7,
+    "userEmail":"hridoybhuyan2001@gmail.com",
+    "name": "Protein Shake",
+    "genericName": "Whey Protein Concentrate",
+    "description": "High-protein drink for fitness enthusiasts.",
+    "imgUpload": null,
+    "imgUrl": "https://cdn2.arogga.com/eyJidWNrZXQiOiJhcm9nZ2EiLCJrZXkiOiJQcm9kdWN0LXBfaW1hZ2VzXC81OTU5M1wvNTk1OTMtNzF4SnczTkQ5c0wtZXJramprLmpwZWciLCJlZGl0cyI6W119",
+    "category": "food-and-nutrition",
+    "company": "Incepta",
+    "unit": "1.81kg",
+    "unitPrice": 55,
+    "discountPercentage": 8.5,
+    "available": 10,
+    "newPrice": 50.37
+
+
+  },
+  {
+    "id": 8,
+    "userEmail":"hridoybhuyan2001@gmail.com",
+    "name": "Hand Sanitizer",
+    "genericName": "Isopropyl Alcohol 70%",
+    "description": "Kills 99.9% of germs instantly.",
+    "imgUpload": null,
+    "imgUrl": "https://cdn2.arogga.com/eyJidWNrZXQiOiJhcm9nZ2EiLCJrZXkiOiJtZWRpY2luZVwvNDlcLzQ5OTkwLUhhbmRzYWZlXzEtdzgxZG1hLmpwZWciLCJlZGl0cyI6W119",
+    "category": "healthcare",
+    "company": "Beximco Pharma",
+    "unit": "500ml",
+    "unitPrice": 20,
+    "discountPercentage": 5,
+    "available": 10,
+    "newPrice": 19.0
+
+
+  }
+]

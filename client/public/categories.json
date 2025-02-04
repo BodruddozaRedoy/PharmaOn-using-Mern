@@ -1,0 +1,51 @@
+[
+    {
+      "id": 1,
+      "name": "Medicine",
+      "slug": "medicine",
+      "img": "https://img.icons8.com/?size=100&id=Gsg9P4kKd6zB&format=png&color=000000"
+    },
+    {
+      "id": 2,
+      "name": "Healthcare",
+      "slug": "healthcare",
+      "img": "https://img.icons8.com/?size=100&id=19625&format=png&color=000000"
+    },
+    {
+      "id": 3,
+      "name": "Baby & Mom Care",
+      "slug": "baby-and-mom-care",
+      "img": "https://img.icons8.com/?size=100&id=5ylCh8WWmAHf&format=png&color=000000"
+    },
+    {
+      "id": 4,
+      "name": "Food & Nutrition",
+      "slug": "food-and-nutrition",
+      "img": "https://img.icons8.com/?size=100&id=20873&format=png&color=000000"
+    },
+    {
+      "id": 5,
+      "name": "Supplement",
+      "slug": "supplement",
+      "img": "https://img.icons8.com/?size=100&id=50871&format=png&color=000000"
+    },
+    {
+      "id": 6,
+      "name": "Pet Care",
+      "slug": "pet-care",
+      "img": "https://img.icons8.com/?size=100&id=123964&format=png&color=000000"
+    },
+    {
+      "id": 7,
+      "name": "Beauty",
+      "slug": "beauty",
+      "img": "https://img.icons8.com/?size=100&id=20857&format=png&color=000000"
+    },
+    {
+      "id": 8,
+      "name": "Herbal",
+      "slug": "herbal",
+      "img": "https://img.icons8.com/?size=100&id=6GFOd4ryvY3l&format=png&color=000000"
+    }
+  ]
+  

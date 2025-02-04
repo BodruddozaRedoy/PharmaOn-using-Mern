@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.active{
+  color: #0f7986;
+  border-bottom: 2px solid #0f7986;
+}
+/* Style for the scrollbar track */
+::-webkit-scrollbar {
+    width: 10px !important;  /* Adjust scrollbar width */
+    height: 5px !important;  /* Adjust scrollbar height (for horizontal scrollbars) */
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #0f7986; /* Background color of the track */
+    border-radius: 30px; /* Rounded edges for the track */
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #0f7986; /* Color of the thumb */
+    border-radius: 30px; /* Rounded edges for the thumb */
+    border: 2px solid #f0f0f0; /* Add padding between track and thumb */
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #0f7986; /* Thumb color on hover */
+  }
+  
