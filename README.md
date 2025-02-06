@@ -5,7 +5,7 @@
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](#license)
 [![GitHub stars](https://img.shields.io/github/stars/your-repo/pharmaon)](#)
 [![GitHub forks](https://img.shields.io/github/forks/your-repo/pharmaon)](#)
-[![Live Demo](https://img.shields.io/badge/demo-live-blue)](#) <!-- Replace with actual link -->
+[![Live Demo](https://img.shields.io/badge/demo-live-blue)](https://pharmaon-ec9a5.web.app/) <!-- Replace with actual link -->
 
 ## 🚀 Introduction  
 
@@ -13,7 +13,7 @@
 
 ## 🌍 Live Demo  
 
-🔗 **[PharmaOn Live Website](#)** <!-- Replace with actual link -->
+🔗 **[PharmaOn Live Website](https://pharmaon-ec9a5.web.app/)** <!-- Replace with actual link -->
 
 ## 🔑 Admin Credentials  
 
