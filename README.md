@@ -1,10 +1,7 @@
 # 🏥 PharmaOn  
 
-![PharmaOn](#) <!-- Add a relevant logo or image -->
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](#license)
-[![GitHub stars](https://img.shields.io/github/stars/your-repo/pharmaon)](#)
-[![GitHub forks](https://img.shields.io/github/forks/your-repo/pharmaon)](#)
+
 [![Live Demo](https://img.shields.io/badge/demo-live-blue)](https://pharmaon-ec9a5.web.app/) <!-- Replace with actual link -->
 
 ## 🚀 Introduction  
@@ -27,13 +24,7 @@
 - [Key Features](#-key-features)  
 - [Technology Stack](#-technology-stack)  
 - [Installation](#-installation)  
-- [Usage](#-usage)  
-- [Configuration](#-configuration)  
-- [Dependencies](#-dependencies)  
-- [Screenshots](#-screenshots)  
-- [Troubleshooting](#-troubleshooting)  
-- [Contributors](#-contributors)  
-- [License](#-license)  
+ 
 
 ---
 
@@ -80,7 +71,7 @@ Ensure you have the following installed:
 ### **Steps to Run Locally**  
 ```sh
 # Clone the repository
-git clone https://github.com/your-repo/pharmaon.git
+git clone https://github.com/BodruddozaRedoy/PharmaOn-using-Mern.git
 cd pharmaon
 
 # Install dependencies
