@@ -1,0 +1,17 @@
+aside::-webkit-scrollbar {
+  width: 80px !important; /* Width of the scrollbar */
+}
+
+aside::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Background color of the track */
+  border-radius: 10px;
+}
+
+aside::-webkit-scrollbar-thumb {
+  background: #4caf50; /* Color of the scrollbar */
+  border-radius: 10px;
+}
+
+aside::-webkit-scrollbar-thumb:hover {
+  background: #45a049; /* Darker shade on hover */
+}

@@ -10,22 +10,20 @@
 }
 /* Style for the scrollbar track */
 ::-webkit-scrollbar {
-    width: 10px !important;  /* Adjust scrollbar width */
-    height: 5px !important;  /* Adjust scrollbar height (for horizontal scrollbars) */
-  }
-  
-  ::-webkit-scrollbar-track {
-    background: #0f7986; /* Background color of the track */
-    border-radius: 30px; /* Rounded edges for the track */
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background: #0f7986; /* Color of the thumb */
-    border-radius: 30px; /* Rounded edges for the thumb */
-    border: 2px solid #f0f0f0; /* Add padding between track and thumb */
-  }
-  
-  ::-webkit-scrollbar-thumb:hover {
-    background: #0f7986; /* Thumb color on hover */
-  }
+  width: 80px !important; /* Width of the scrollbar */
+}
+
+aside::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Background color of the track */
+  border-radius: 10px;
+}
+
+aside::-webkit-scrollbar-thumb {
+  background: #4CAF50; /* Color of the scrollbar */
+  border-radius: 10px;
+}
+
+aside::-webkit-scrollbar-thumb:hover {
+  background: #45a049; /* Darker shade on hover */
+}
   
