@@ -1,41 +1,81 @@
-# PharmaOn
-
-## This web application for a multi-vendor e-commerce platform specializing in the sale of medicines and healthcare products. The platform provided a seamless user experience for purchasing medications, submitting queries, and receiving expert advice using the MERN stack.
+# 🏥 PharmaOn  
 
 
-### Project Name: PharmaOn
 
----
+[![Live Demo](https://img.shields.io/badge/demo-live-blue)](https://pharmaon-ec9a5.web.app/) <!-- Replace with actual link -->
 
-### Live Site Link
-[PharmaOn Live Website](https://pharmaon-ec9a5.web.app/)
+## 🚀 Introduction  
 
----
+**PharmaOn** is a multi-vendor e-commerce platform for medicines and healthcare products, built using the **MERN stack**. It provides a seamless shopping experience, allowing users to purchase medications, submit queries, and receive expert advice.  
 
-### Admin Credentials:
-- **Admin Email:** admin@gmail.com
-- **Admin Password:** Aa1234
+## 🌍 Live Demo  
 
----
+🔗 **[PharmaOn Live Website](https://pharmaon-ec9a5.web.app/)** <!-- Replace with actual link -->
 
-### Key Features
-1. **Responsive Design:** Fully responsive for mobile, tablet, and desktop views, including the admin dashboard.
-2. **User Authentication:** Supports email/password and social logins (Google).
-3. **Dynamic Role Management:** Admin can promote users to sellers or downgrade them.
-4. **Shop Page:** Displays medicines in a tabular format with select and view options.
-5. **Cart Functionality:** Allows users to manage medicines, adjust quantities, and proceed to checkout.
-6. **Secure Checkout:** Users can make payments securely using Stripe.
-7. **Dynamic Invoice:** Automatically generated after payment with a PDF download option.
-8. **Category Management:** Users can browse medicines by categories.
-9. **Real-Time Notifications:** Sweet alerts and toasts for CRUD operations, authentication, and other user interactions.
-10. **Optimized Data Fetching:** Implemented TanStack Query for efficient GET requests.
+## 🔑 Admin Credentials  
+
+- **Email**: `admin@gmail.com`  
+- **Password**: `Aa1234`  
 
 ---
 
-### Technology Stack
-- **Frontend:** React.js, React Router, TanStack Query, Tailwind CSS
-- **State Management:** Context API
-- **Icons & Alerts:** Icons8, React Toastify, SweetAlert
-- **File Management:** ImgBB
+## 📚 Table of Contents  
+
+- [Key Features](#-key-features)  
+- [Technology Stack](#-technology-stack)  
+- [Installation](#-installation)  
+ 
 
 ---
+
+## 🎯 Key Features  
+
+✔ **Responsive Design** – Mobile, tablet, and desktop-friendly, including admin dashboard.  
+✔ **User Authentication** – Supports email/password login and Google authentication.  
+✔ **Dynamic Role Management** – Admin can promote users to sellers or downgrade them.  
+✔ **Shop Page** – Displays medicines in a tabular format with select and view options.  
+✔ **Cart Functionality** – Add/remove medicines, adjust quantities, and checkout securely.  
+✔ **Secure Payments** – Integrated **Stripe** for transactions.  
+✔ **Invoice System** – Auto-generated PDF invoices after payment.  
+✔ **Real-Time Notifications** – SweetAlert and Toast notifications.  
+✔ **Optimized Data Fetching** – Using **TanStack Query** for better performance.  
+
+---
+
+## 🛠 Technology Stack  
+
+### **Frontend:**  
+- ⚛️ **React.js**  
+- 🚏 **React Router**  
+- 🎨 **Tailwind CSS**  
+- 🔄 **TanStack Query**  
+
+### **State Management:**  
+- 🏗 **Context API**  
+
+### **Other Libraries:**  
+- 📜 **React-PDF Renderer, jsPDF, and AutoTable** (PDF & printing)  
+- 💳 **Stripe for Payments**  
+- 🔔 **SweetAlert2 & React Toastify** (Notifications)  
+- 📊 **React Data Table Component**  
+
+---
+
+## 🔧 Installation  
+
+### **Prerequisites**  
+Ensure you have the following installed:  
+- Node.js (>= 16.x)  
+- npm or yarn  
+
+### **Steps to Run Locally**  
+```sh
+# Clone the repository
+git clone https://github.com/BodruddozaRedoy/PharmaOn-using-Mern.git
+cd pharmaon
+
+# Install dependencies
+npm install
+
+# Run the development server
+npm run dev
