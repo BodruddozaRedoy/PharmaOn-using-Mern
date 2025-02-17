@@ -8,6 +8,8 @@ import DiscountProducts from '../../components/Home/DisCountProducts';
 import AllProducts from '../../components/Home/AllProducts';
 import { AuthContext } from '../../context/AuthContext';
 import { Helmet } from 'react-helmet';
+import Testimonials from '../../components/Home/Testimonials';
+import Newsletter from '../../components/Home/Newsletter';
 
 const HomePage = () => {
     const {user} = useContext(AuthContext)
@@ -30,6 +32,8 @@ const HomePage = () => {
                 <Service/>
                 <AllProducts/>
                 <DiscountProducts/>
+                <Testimonials/>
+                <Newsletter/>
             </main>
             </div>
             </div>

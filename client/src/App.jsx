@@ -29,6 +29,7 @@ import InvoicePage from "./pages/Dashboard/Invoice/InvoicePage";
 import Table from "./components/Common/DataTable";
 import AdminRoute from "./routes/AdminRoute";
 import SellerRoute from "./routes/SellerRoute";
+import AboutUsPage from "./pages/About/AboutUsPage";
 // import InvoicePage from "./pages/Dashboard/Invoice2/InvoicePage";
 // import InvoicePage from "./pages/Dashboard/Invoice/InvoicePage";
 const App = () => {
@@ -40,12 +41,8 @@ const App = () => {
           {/* with nav routes  */}
           <Route path="/" element={<MainLayout />}>
             <Route path="/" element={<HomePage />} />
-            <Route
-              path="/shop"
-              element={
-                  <ShopPage />
-              }
-            />
+            <Route path="/shop" element={<ShopPage />}/>
+            <Route path="/about" element={<AboutUsPage/>}/>
             <Route path="/cart" element={<PrivateRoute><Cart /></PrivateRoute>} />
             <Route path="/checkout" element={<PrivateRoute><CheckoutPage /></PrivateRoute>} />
             <Route path="/invoice" element={<PrivateRoute><InvoicePage/></PrivateRoute>}/>

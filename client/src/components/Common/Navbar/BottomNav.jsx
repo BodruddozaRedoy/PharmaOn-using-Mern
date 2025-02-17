@@ -12,6 +12,11 @@ const navLinks = [
         title: "Shop",
         link: "/shop"
     },
+    {
+        id:3,
+        title: "About",
+        link: "/about"
+    },
     // {
     //     id:3,
     //     title: "About",

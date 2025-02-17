@@ -13,7 +13,7 @@ export default {
         content: "#9ca3af",
         secondary: "#055862",
         accent: "#f0f0d7",
-        neutral: "#291c10",
+        neutral: "#111827",
         "base-100": "#ffeff7",
         info: "#00a3ff",
         success: "#5cb338",
