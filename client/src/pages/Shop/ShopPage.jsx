@@ -6,24 +6,27 @@ import { FaEye } from "react-icons/fa";
 import useAddToCart from "../../hooks/useAddToCart";
 import toast from "react-hot-toast";
 import useAuth from "../../hooks/useAuth";
+import ProductCard from "../../components/Common/ProductCard";
 
 const ShopPage = () => {
   const [products, productLoading, productRefetch] = useAllProducts();
   const [filterText, setFilterText] = useState("");
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [cart, setCart] = useState([]); // Cart state
-  const { addToCart, loading } = useAddToCart()
-  const {user} = useAuth()
+  const { addToCart, loading } = useAddToCart();
+  const [productStyle, setProductStyle] = useState("grid");
+  const [sortedData, setSortedData] = useState();
+  const { user } = useAuth();
 
   console.log(selectedProduct);
-  
+
   // Add product to cart
   const handleAddToCart = (product) => {
     // setCart([...cart, product]);
-    if(!user){
-      return toast.error("Please logged in first")
+    if (!user) {
+      return toast.error("Please logged in first");
     }
-    addToCart(product)
+    addToCart(product);
     // alert(`${product.name} added to the cart!`);
   };
 
@@ -111,7 +114,6 @@ const ShopPage = () => {
       button: true,
     },
   ];
-  
 
   // Filter data based on search input
   const filteredData = products?.filter(
@@ -120,6 +122,18 @@ const ShopPage = () => {
       item.genericName?.toLowerCase().includes(filterText.toLowerCase()) ||
       item.company.toLowerCase().includes(filterText.toLowerCase())
   );
+
+  // sort by products
+
+  const handleSort = (type) => {
+    if (type === "ascending") {
+      const asc = products.sort((a, b) => a.newPrice - b.newPrice);
+      setSortedData(asc)
+    } else {
+      const dsc = products.sort((a, b) => b.newPrice - a.newPrice);
+      setSortedData(dsc)
+    }
+  };
 
   return (
     <div className="lg:m-10 p-5 lg:p-10 bg-accent rounded-xl">
@@ -136,18 +150,38 @@ const ShopPage = () => {
             value={filterText}
             onChange={(e) => setFilterText(e.target.value)}
           />
-          <div className="flex gap-4 mr-5">
-            <div className="w-8 cursor-pointer">
-              <img
-                src="https://img.icons8.com/?size=100&id=o15Kxsr7cBWT&format=png&color=000000"
-                alt=""
-              />
+          <div className="flex gap-5 items-center">
+            <div className="flex gap-4 mr-5">
+              <div
+                onClick={() => setProductStyle("grid")}
+                className="w-8 cursor-pointer"
+              >
+                <img
+                  src="https://img.icons8.com/?size=100&id=o15Kxsr7cBWT&format=png&color=000000"
+                  alt=""
+                />
+              </div>
+              <div
+                onClick={() => setProductStyle("list")}
+                className="w-8 cursor-pointer"
+              >
+                <img
+                  src="https://img.icons8.com/?size=100&id=8180&format=png&color=000000"
+                  alt=""
+                />
+              </div>
             </div>
-            <div className="w-8 cursor-pointer">
-              <img
-                src="https://img.icons8.com/?size=100&id=8180&format=png&color=000000"
-                alt=""
-              />
+            <div>
+              <select
+                onChange={(e) => handleSort(e.target.value)}
+                className="select select-bordered w-full max-w-xs"
+              >
+                <option disabled selected>
+                  Sort By
+                </option>
+                <option value={"ascending"}>Ascending</option>
+                <option value={"descending"}>Descending</option>
+              </select>
             </div>
           </div>
         </div>
@@ -161,18 +195,26 @@ const ShopPage = () => {
       </div>
 
       {/* Data Table */}
-      <DataTable
-        columns={columns}
-        data={filteredData}
-        pagination
-        highlightOnHover
-      />
+      {productStyle === "list" ? (
+        <DataTable
+          columns={columns}
+          data={filteredData}
+          pagination
+          highlightOnHover
+        />
+      ) : (
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 bg-white p-5 rounded-xl gap-5 lg:gap-10">
+          {products.map((product, index) => (
+            <ProductCard product={product} key={index} />
+          ))}
+        </div>
+      )}
 
       {/* Modal for Viewing Product Details */}
       {selectedProduct && (
         <div className="modal modal-open">
           <div className="modal-box">
-          <img
+            <img
               src={selectedProduct.imgUpload || selectedProduct.imgUrl}
               alt={selectedProduct.name}
               className="w-full h-auto rounded-lg mt-3"
@@ -199,7 +241,7 @@ const ShopPage = () => {
             <p>
               <strong>Item owner:</strong> {selectedProduct.userEmail}
             </p>
-            
+
             <div className="modal-action">
               <button onClick={closeModal} className="btn btn-primary">
                 Close
