@@ -17,7 +17,7 @@ const HomePage = () => {
   const { user } = useContext(AuthContext);
 
   return (
-    <div className=" space-y-6 my-5">
+    <div className=" space-y-6 my-5 dark:text-white">
       <Helmet title="Home | PharmaOn" />
 
       <header className="lg:m-10">

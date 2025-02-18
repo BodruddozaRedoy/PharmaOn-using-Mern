@@ -26,7 +26,7 @@ const navLinks = [
 
 const BottomNav = () => {
     return (
-        <div className='py-3 px-10 flex justify-between items-center shadow'>
+        <div className='py-3 px-10 flex justify-between items-center shadow dark:bg-gray-800 dark:text-white'>
             {/* Nav links */}
             <div></div>
             <ul className='flex gap-5 items-center'>

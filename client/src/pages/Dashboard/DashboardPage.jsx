@@ -82,7 +82,7 @@ const DashboardPage = () => {
       <Helmet title="Dashboard | PharmaOn"/>
 
       {/* Sidebar */}
-      <div className="menu lg:p-10 bg-accent rounded-xl lg:col-span-1 font-semibold space-y-4 mb-5 p-5">
+      <div className="menu lg:p-10 bg-accent rounded-xl lg:col-span-1 font-semibold space-y-4 mb-5 p-5 ">
         {filteredLinks.map((link, i) => (
           <NavLink key={i} to={link.link}>
             {link.title}

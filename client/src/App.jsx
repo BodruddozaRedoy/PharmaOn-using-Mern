@@ -30,12 +30,13 @@ import Table from "./components/Common/DataTable";
 import AdminRoute from "./routes/AdminRoute";
 import SellerRoute from "./routes/SellerRoute";
 import AboutUsPage from "./pages/About/AboutUsPage";
+import ErrorPage from "./pages/Error/ErrorPage";
 // import InvoicePage from "./pages/Dashboard/Invoice2/InvoicePage";
 // import InvoicePage from "./pages/Dashboard/Invoice/InvoicePage";
 const App = () => {
   const { user, loading } = useAuth();
   return (
-    <div className="font-lexend relative">
+    <div className="font-lexend relative dark:bg-gray-800 ">
       <BrowserRouter>
         <Routes>
           {/* with nav routes  */}
@@ -84,6 +85,8 @@ const App = () => {
             <Route path="/register" element={<RegisterPage />} />
             <Route path="/login" element={<LoginPage />} />
           </Route>
+
+          <Route path="*" element={<ErrorPage/>}/>
         </Routes>
       </BrowserRouter>
     </div>

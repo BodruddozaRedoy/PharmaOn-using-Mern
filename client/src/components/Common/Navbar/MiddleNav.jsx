@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import MainBtn from "../../../shared/MainBtn";
 import { AuthContext } from "../../../context/AuthContext";
 import toast from "react-hot-toast";
@@ -6,9 +6,13 @@ import { Link } from "react-router-dom";
 import useCart from "../../../hooks/useCart";
 import { useQuery } from "@tanstack/react-query";
 import { axiosPublic } from "../../../hooks/useAxiosInstance";
+import { FaShoppingBag } from "react-icons/fa";
 
 const MiddleNav = () => {
   const { user, logOut } = useContext(AuthContext);
+  const [darkMode, setDarkMode] = useState(
+    localStorage.getItem("theme") === "dark"
+  );
   const { data: loggedUser } = useQuery({
     queryKey: ["loggedUser"],
     queryFn: async () => {
@@ -27,8 +31,18 @@ const MiddleNav = () => {
   };
 
   const subtotal = cart.reduce((acc, item) => acc + item.price, 0);
+
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+    }
+  }, [darkMode]);
   return (
-    <div className="py-5 px-5 md:px-10 flex items-center justify-between border-b w-full">
+    <div className="py-5 px-5 md:px-10 flex items-center justify-between border-b w-full dark:bg-gray-800">
       {/* Navbar start  */}
       <Link to={"/"}>
         <div className="flex items-center gap-3">
@@ -55,21 +69,27 @@ const MiddleNav = () => {
             </button>
           </div>
         </div> */}
-        <select defaultValue={'english'} className="select select-bordered w-full max-w-xs hidden lg:flex">
-          <option value={'english'}>
-            English
-          </option>
-          <option>Bengali</option>
-          <option>Arabic</option>
+        <select
+          defaultValue={"english"}
+          onChange={(e) => setDarkMode(e.target.value === "dark")}
+        value={darkMode ? "dark" : "light"}
+          className="select select-bordered w-full max-w-xs hidden lg:flex dark:bg-primary dark:text-white"
+        >
+          <option value={"light"}>Light</option>
+          <option value={"dark"}>Dark</option>
         </select>
       </div>
       {/* Navbar end  */}
       <div className="flex items-center gap-3">
-        {
-          user && (<div className="dropdown dropdown-end ">
-            <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
+        {user && (
+          <div className="dropdown dropdown-end ">
+            <div
+              tabIndex={0}
+              role="button"
+              className="btn btn-ghost btn-circle"
+            >
               <div className="indicator">
-                <svg
+                {/* <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-7 w-7"
                   fill="none"
@@ -82,7 +102,8 @@ const MiddleNav = () => {
                     strokeWidth="2"
                     d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
                   />
-                </svg>
+                </svg> */}
+                <FaShoppingBag className="text-3xl text-primary"/>
                 <span className="badge badge-sm indicator-item">
                   {cart.length}
                 </span>
@@ -92,7 +113,7 @@ const MiddleNav = () => {
               tabIndex={0}
               className="card card-compact dropdown-content bg-accent z-[1] mt-3 w-52 shadow"
             >
-              <div className="card-body">
+              <div className="card-body dark:bg-gray-800 rounded-xl">
                 <span className="text-lg font-bold">{cart.length} Items</span>
                 <span className="text-primary">
                   Subtotal: ${subtotal?.toFixed(2)}
@@ -103,15 +124,15 @@ const MiddleNav = () => {
                       View cart
                     </button>
                   </Link>
-  
+
                   {/* <button className="btn bg-primary text-accent btn-block">
                     <Link to={"/cart"}>View cart</Link>
                   </button> */}
                 </div>
               </div>
             </div>
-          </div>)
-        }
+          </div>
+        )}
         <div className="dropdown dropdown-end">
           <div
             tabIndex={0}

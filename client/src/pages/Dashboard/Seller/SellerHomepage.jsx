@@ -3,6 +3,7 @@ import useAxiosInstance from '../../../hooks/useAxiosInstance';
 import { useQuery } from '@tanstack/react-query';
 import useAuth from '../../../hooks/useAuth';
 import { Helmet } from 'react-helmet';
+import CategoryDistributionChart from '../../../components/Common/Overview/CategoryDistributionChart';
 
 const SellerHomepage = () => {
     const axiosSecure = useAxiosInstance();
@@ -27,7 +28,7 @@ const SellerHomepage = () => {
       <Helmet title="Seller Home | PharmaOn"/>
 
             <h1 className='font-semibold text-xl'>Seller Homepage</h1>
-            <div className='bg-white rounded-xl p-5 lg:p-10 mt-3 space-y-5 lg:grid grid-cols-3 gap-5'>
+            <div className='bg-white rounded-xl p-5 lg:p-10 mt-3 space-y-5 md:space-y-0 lg:grid grid-cols-3 gap-5'>
                 <div className='p-10 rounded-xl bg-success text-white'>
                     <h1 className='font-semibold text-xl text-center'>Total Sales</h1>
                     <p className='text-center'>${totalSales?.toFixed(2)}</p>
@@ -41,6 +42,8 @@ const SellerHomepage = () => {
                     <p className='text-center'>${paidSales?.toFixed(2)}</p>
                 </div>
             </div>
+
+            <CategoryDistributionChart/>
         </div>
     );
 };

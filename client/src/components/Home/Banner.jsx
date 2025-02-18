@@ -58,11 +58,11 @@ const Banner = () => {
 
                 {/* TODO: need some icon animation at banner bg  */}
                 <div className="lg:w-[400px] space-y-4">
-                  <p>{i.category}</p>
+                  <p className="dark:text-gray-800">{i.category}</p>
                   <h1 className="text-bannerText text-4xl font-bold">
                     {i.name}
                   </h1>
-                  <p className="">
+                  <p className="dark:text-gray-800">
                     {i.description}
                   </p>
                   <div className="hidden md:flex"><Link to={"/shop"}><MainBtn text={"Shop Now"} /></Link></div>

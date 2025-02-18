@@ -30,14 +30,14 @@ const CategoryProductPage = () => {
     await addToCart(item)
   }
     return (
-        <div className='lg:m-10 bg-accent lg:p-10 rounded-xl'>
+        <div className='lg:m-10 bg-accent lg:p-10 rounded-xl dark:bg-gray-600'>
       <Helmet title="Category | PharmaOn"/>
             <h1 className='text-center font-bold text-xl'>{slug.toLocaleUpperCase()}</h1>
             <div className="overflow-x-auto">
-      <table className="table bg-white mt-5">
+      <table className="table bg-white mt-5 dark:bg-gray-800 dark:text-white">
         {/* head */}
         <thead>
-          <tr>
+          <tr className='dark:text-white'>
             <th>Index</th>
             <th>Name</th>
             <th>Old Price</th>

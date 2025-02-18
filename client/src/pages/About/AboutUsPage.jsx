@@ -8,13 +8,13 @@ const AboutUsPage = () => {
     
    
   return (
-    <div>
+    <div className="dark:text-white">
       <Helmet>
         <meta charSet="utf-8" />
         <title>About | PharmaOn</title>
       </Helmet>
 
-        <div className="hero bg-white">
+        <div className="hero bg-white dark:bg-gray-800">
         <div className="hero-content flex-col lg:flex-row-reverse">
         <img
         src="https://cdni.iconscout.com/illustration/premium/thumb/group-discussion-illustration-download-in-svg-png-gif-file-formats--composition-round-speech-pack-people-illustrations-2708924.png"
@@ -31,7 +31,7 @@ const AboutUsPage = () => {
 
     {/* form section  */}
 
-    <div className="hero bg-base-200 py-20">
+    <div className="hero bg-base-200 py-20 dark:bg-gray-800">
   <div className="hero-content flex-col">
     <div className="text-center lg:text-left">
       <h1 className="text-5xl font-bold text-center">Get in touch with us</h1>

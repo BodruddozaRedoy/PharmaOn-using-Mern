@@ -83,14 +83,14 @@ const CartPage = () => {
     navigate("/checkout");
   };
   return (
-    <div className="md:m-10 md:p-10 bg-accent rounded-xl">
-      <div className="">
+    <div className="md:m-10 md:p-10 bg-accent dark:text-black rounded-xl">
+      <div className="dark:bg-black">
         <h1 className="text-3xl font-bold text-primary text-center mb-5">
           Shopping Cart
         </h1>
         <div className="grid grid-cols-5 gap-5">
           {/* product info section  */}
-          <div className="col-span-4 bg-white rounded-xl">
+          <div className="col-span-4 bg-white dark:bg-black rounded-xl">
             <div className="overflow-x-auto">
               {cart.length <= 0 ? (
                 <div className="flex flex-col justify-center items-center mt-5 gap-5 text-xl text-red-500">
@@ -102,7 +102,7 @@ const CartPage = () => {
                   </Link>
                 </div>
               ) : (
-                <table className="table ">
+                <table className="table dark:bg-gray-800">
                   {/* head */}
                   <thead>
                     <tr>

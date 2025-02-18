@@ -28,13 +28,13 @@ const DiscountProducts = () => {
         <div className="flex gap-3 items-center">
           <div
             ref={prevButtonRef}
-            className="bg-accent p-2 rounded-full cursor-pointer select-none"
+            className="bg-accent p-2 rounded-full cursor-pointer select-none dark:bg-gray-600"
           >
             <IoMdArrowRoundBack className="text-xl" />
           </div>
           <div
             ref={nextButtonRef}
-            className="bg-accent p-2 rounded-full cursor-pointer select-none"
+            className="bg-accent p-2 rounded-full cursor-pointer select-none dark:bg-gray-600"
           >
             <IoMdArrowRoundForward className="text-xl" />
           </div>

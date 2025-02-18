@@ -7,6 +7,10 @@ import useAddToCart from "../../hooks/useAddToCart";
 import toast from "react-hot-toast";
 import useAuth from "../../hooks/useAuth";
 import ProductCard from "../../components/Common/ProductCard";
+import { BiSolidGridAlt } from "react-icons/bi";
+import { CiBoxList } from "react-icons/ci";
+
+
 
 const ShopPage = () => {
   const [products, productLoading, productRefetch] = useAllProducts();
@@ -97,7 +101,7 @@ const ShopPage = () => {
     {
       name: "Actions",
       cell: (row) => (
-        <div className="flex justify-center gap-2">
+        <div className="flex justify-center gap-2 ">
           <button
             onClick={() => handleAddToCart(row)}
             className="btn btn-ghost btn-xs bg-success text-white"
@@ -149,17 +153,17 @@ const ShopPage = () => {
   console.log(productStyle);
 
   return (
-    <div className="lg:m-10 p-5 lg:p-10 bg-accent rounded-xl">
+    <div className="lg:m-10 p-5 lg:p-10 bg-accent rounded-xl dark:bg-gray-500 dark:text-white">
       <Helmet title="Shop | PharmaOn" />
 
       {/* Search Input */}
       <div>
-        <div className="flex justify-between items-center py-3 px-5 bg-white rounded-xl mb-3">
+        <div className="flex justify-between items-center py-3 px-5 bg-white dark:bg-gray-800 rounded-xl mb-3">
           <h1 className="font-semibold text-xl">Shop</h1>
           <input
             type="text"
             placeholder="Search by name, generic name, or company..."
-            className="input input-bordered lg:w-[50%] hidden lg:flex"
+            className="input input-bordered lg:w-[50%] hidden lg:flex dark:text-gray-800"
             value={filterText}
             onChange={(e) => setFilterText(e.target.value)}
           />
@@ -169,25 +173,21 @@ const ShopPage = () => {
                 onClick={() => setProductStyle("grid")}
                 className="w-8 cursor-pointer"
               >
-                <img
-                  src="https://img.icons8.com/?size=100&id=o15Kxsr7cBWT&format=png&color=000000"
-                  alt=""
-                />
+                <BiSolidGridAlt className="text-3xl"/>
+
               </div>
               <div
                 onClick={() => setProductStyle("list")}
                 className="w-8 cursor-pointer"
               >
-                <img
-                  src="https://img.icons8.com/?size=100&id=8180&format=png&color=000000"
-                  alt=""
-                />
+                <CiBoxList className="text-3xl"/>
+
               </div>
             </div>
             <div>
               <select
                 onChange={(e) => handleSort(e.target.value)}
-                className="select select-bordered w-full max-w-xs"
+                className="select select-bordered w-full max-w-xs dark:text-gray-800"
               >
                 <option disabled selected>
                   Sort By
@@ -216,7 +216,7 @@ const ShopPage = () => {
           highlightOnHover
         />
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 bg-white p-5 rounded-xl gap-5 lg:gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 bg-white dark:bg-gray-800 p-5 rounded-xl gap-5 lg:gap-10">
           {sortedData?.map((product, index) => (
             <ProductCard product={product} key={index} />
           ))}
@@ -225,7 +225,7 @@ const ShopPage = () => {
 
       {/* Modal for Viewing Product Details */}
       {selectedProduct && (
-        <div className="modal modal-open">
+        <div className="modal modal-open dark:text-black">
           <div className="modal-box">
             <img
               src={selectedProduct.imgUpload || selectedProduct.imgUrl}
