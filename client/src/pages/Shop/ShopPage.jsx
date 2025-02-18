@@ -15,10 +15,14 @@ const ShopPage = () => {
   const [cart, setCart] = useState([]); // Cart state
   const { addToCart, loading } = useAddToCart();
   const [productStyle, setProductStyle] = useState("grid");
-  const [sortedData, setSortedData] = useState(products);
+  const [sortedData, setSortedData] = useState();
   const { user } = useAuth();
 
   // console.log(selectedProduct);
+
+  useEffect(() => {
+    setSortedData(products);
+  }, [products]);
 
   // Add product to cart
   const handleAddToCart = (product) => {
@@ -213,7 +217,7 @@ const ShopPage = () => {
         />
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 bg-white p-5 rounded-xl gap-5 lg:gap-10">
-          {sortedData.map((product, index) => (
+          {sortedData?.map((product, index) => (
             <ProductCard product={product} key={index} />
           ))}
         </div>
