@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import DataTable from "react-data-table-component";
 import useAllProducts from "../../hooks/useAllProducts";
 import { Helmet } from "react-helmet";
@@ -15,10 +15,10 @@ const ShopPage = () => {
   const [cart, setCart] = useState([]); // Cart state
   const { addToCart, loading } = useAddToCart();
   const [productStyle, setProductStyle] = useState("grid");
-  const [sortedData, setSortedData] = useState();
+  const [sortedData, setSortedData] = useState(products);
   const { user } = useAuth();
 
-  console.log(selectedProduct);
+  // console.log(selectedProduct);
 
   // Add product to cart
   const handleAddToCart = (product) => {
@@ -68,25 +68,25 @@ const ShopPage = () => {
     {
       name: "Medicine Name",
       selector: (row) => row.name,
-      sortable: true,
+      // sortable: true,
       width: "300px",
     },
     {
       name: "Company Name",
       selector: (row) => row.company,
-      sortable: true,
+      // sortable: true,
       width: "300px",
     },
     {
       name: "Old Price",
       selector: (row) => `$${row.unitPrice?.toFixed(2)}`,
-      sortable: true,
+      // sortable: true,
       width: "200px",
     },
     {
       name: "New Price",
       selector: (row) => `$${row.newPrice?.toFixed(2)}`,
-      sortable: true,
+      // sortable: true,
       width: "200px",
       right: true,
     },
@@ -123,17 +123,26 @@ const ShopPage = () => {
       item.company.toLowerCase().includes(filterText.toLowerCase())
   );
 
+  useEffect(() => {
+    setSortedData(filteredData);
+  }, [filterText]);
+
   // sort by products
 
   const handleSort = (type) => {
+    console.log(type);
+
     if (type === "ascending") {
-      const asc = products.sort((a, b) => a.newPrice - b.newPrice);
-      setSortedData(asc)
-    } else {
-      const dsc = products.sort((a, b) => b.newPrice - a.newPrice);
-      setSortedData(dsc)
+      const asc = [...products].sort((a, b) => a.newPrice - b.newPrice);
+      setSortedData(asc);
+    }
+    if (type === "descending") {
+      const dsc = [...products].sort((a, b) => b.newPrice - a.newPrice);
+      setSortedData(dsc);
     }
   };
+
+  console.log(productStyle);
 
   return (
     <div className="lg:m-10 p-5 lg:p-10 bg-accent rounded-xl">
@@ -195,16 +204,16 @@ const ShopPage = () => {
       </div>
 
       {/* Data Table */}
-      {productStyle === "list" ? (
+      {productStyle == "list" ? (
         <DataTable
           columns={columns}
-          data={filteredData}
+          data={sortedData}
           pagination
           highlightOnHover
         />
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 bg-white p-5 rounded-xl gap-5 lg:gap-10">
-          {products.map((product, index) => (
+          {sortedData.map((product, index) => (
             <ProductCard product={product} key={index} />
           ))}
         </div>
