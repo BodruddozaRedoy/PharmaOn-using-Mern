@@ -6,7 +6,6 @@ import "swiper/css/pagination";
 import { Navigation, Pagination } from "swiper/modules";
 import { IoMdArrowRoundBack, IoMdArrowRoundForward } from "react-icons/io";
 import useCategory from "../../hooks/useCategory";
-import label from "../../assets/icons/label.png";
 import useAllProducts from "../../hooks/useAllProducts";
 import ProductCard from "../Common/ProductCard";
 import ProductSkeleton from "../Common/ProductCardSkeleton";
@@ -18,24 +17,17 @@ const AllProducts = () => {
   const nextButtonRef = useRef(null);
   const [categories, isPending] = useCategory();
   const [products, isLoading] = useAllProducts();
-  // const [filteredProducts, setFilteredProducts] = useState(products)
   const [selected, setSelected] = useState(null);
-  // console.log(filteredProducts);
 
   const { data: filteredProducts = [], isLoading: categoryLoading } = useQuery({
     queryKey: ["category-products", selected],
     queryFn: async () => {
       const res = await axiosPublic.get(`/categories/${selected}`);
-      // setFilteredProducts(res.data);
       return res.data;
     },
 
     enabled: !!selected,
   });
-
-  // useEffect(() => {
-  //   products
-  // }, [])
 
   const handleCategory = async (item) => {
     setSelected(item);
@@ -47,51 +39,51 @@ const AllProducts = () => {
     <div className="">
       <div className="">
         <div className="flex justify-between ">
-        <div className="flex items-center mb-6 gap-4 ">
-          <h2
-            onClick={() => setSelected(null)}
-            className="text-2xl  font-bold cursor-pointer "
-          >
-            All Products({displayProducts.length})
-          </h2>
-          <div className="lg:flex gap-3 hidden flex-wrap ">
-            {categories.map((i, index) => (
-              <div
-                key={index}
-                onClick={() => handleCategory(i.slug)}
-                className="hover:bg-slate-100 dark:hover:text-gray-800 cursor-pointer text-sm rounded-3xl py-2 px-4 border"
-              >
-                {i.name}
-              </div>
-            ))}
+          <div className="flex items-center mb-6 gap-4 ">
+            <h2
+              onClick={() => setSelected(null)}
+              className="text-2xl  font-bold cursor-pointer "
+            >
+              All Products({displayProducts.length})
+            </h2>
+            <div className="lg:flex gap-3 hidden flex-wrap ">
+              {categories.map((i, index) => (
+                <div
+                  key={index}
+                  onClick={() => handleCategory(i.slug)}
+                  className="hover:bg-slate-100 dark:hover:text-gray-800 cursor-pointer text-sm rounded-3xl py-2 px-4 border"
+                >
+                  {i.name}
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-        <div className="flex gap-3 items-center ">
-          <div
-            ref={prevButtonRef}
-            className="bg-accent p-2 rounded-full cursor-pointer select-none dark:bg-gray-600"
-          >
-            <IoMdArrowRoundBack className="text-xl" />
+          <div className="flex gap-3 items-center ">
+            <div
+              ref={prevButtonRef}
+              className="bg-accent p-2 rounded-full cursor-pointer select-none dark:bg-gray-600"
+            >
+              <IoMdArrowRoundBack className="text-xl" />
+            </div>
+            <div
+              ref={nextButtonRef}
+              className="bg-accent p-2 rounded-full cursor-pointer select-none dark:bg-gray-600"
+            >
+              <IoMdArrowRoundForward className="text-xl" />
+            </div>
           </div>
-          <div
-            ref={nextButtonRef}
-            className="bg-accent p-2 rounded-full cursor-pointer select-none dark:bg-gray-600"
-          >
-            <IoMdArrowRoundForward className="text-xl" />
-          </div>
-        </div>
         </div>
         <div className="flex gap-3 items-center justify-start overflow-auto mb-5 lg:hidden">
-            {categories.map((i, index) => (
-              <div
-                key={index}
-                onClick={() => handleCategory(i.slug)}
-                className="hover:bg-slate-100 cursor-pointer text-sm text-nowrap rounded-3xl w-full py-2 px-3 border"
-              >
-                {i.name}
-              </div>
-            ))}
-          </div>
+          {categories.map((i, index) => (
+            <div
+              key={index}
+              onClick={() => handleCategory(i.slug)}
+              className="hover:bg-slate-100 cursor-pointer text-sm text-nowrap rounded-3xl w-full py-2 px-3 border"
+            >
+              {i.name}
+            </div>
+          ))}
+        </div>
       </div>
       <Swiper
         style={{ zIndex: "0" }}

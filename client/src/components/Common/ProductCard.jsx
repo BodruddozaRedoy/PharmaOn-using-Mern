@@ -15,7 +15,7 @@ const ProductCard = ({ product }) => {
   }
   return (
     <div>
-      <div className="product-card border rounded-lg shadow-lg hover:shadow-xl transition-transform transform relative dark:bg-gray-600">
+      <div className="product-card border rounded-lg shadow-lg hover:shadow-xl transition-transform transform relative dark:bg-slate-800">
         <div className="w-full h-80 object-center shadow object-cover overflow-hidden p-3">
           <img
             src={product.imgUpload || product.imgUrl}
