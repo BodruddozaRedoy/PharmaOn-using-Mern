@@ -12,6 +12,7 @@ import Testimonials from "../../components/Home/Testimonials";
 import Newsletter from "../../components/Home/Newsletter";
 import Headroom from "react-headroom";
 import "./Home.css";
+import BlogSection from "../../components/Home/BlogSection";
 
 const HomePage = () => {
   const { user } = useContext(AuthContext);
@@ -44,6 +45,7 @@ const HomePage = () => {
             <AllProducts />
             <DiscountProducts />
             <Testimonials />
+            <BlogSection/>
             <Newsletter />
           </main>
         </div>
