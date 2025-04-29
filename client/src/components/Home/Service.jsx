@@ -28,7 +28,7 @@ const Service = () => {
         <div className='flex flex-wrap lg:flex-nowrap items-center justify-between gap-5 mt-5 lg:mt-0'>
             {
                 services.map((i, index) => (
-                    <div className='flex items-center gap-3 border rounded-xl p-3 w-full dark:bg-slate-800' key={index}>
+                    <div className='flex items-center gap-3 border rounded-xl p-3 w-full dark:bg-slate-800 dark:border-none dark:shadow-md' key={index}>
                         <img src={i.img} alt="" />
                         <div>
                             <h1 className='text-xl font-semibold'>{i.title}</h1>

@@ -7,7 +7,7 @@ import useCategory from '../../hooks/useCategory';
 const Sidebar = () => {
     const [categories] = useCategory()
     return (
-        <div className='bg-white p-5 rounded-xl shadow-md border dark:bg-slate-800'>
+        <div className='bg-white p-5 rounded-xl shadow-md border dark:border-none dark:bg-slate-800'>
             <div className='flex mb-3 justify-center text-primary gap-3 items-center'>
                 <img className='w-6 h-6 object-cover' src="https://img.icons8.com/?size=100&id=3Dou0BduZf0j&format=png&color=0f7986" alt="" />
                 <h1 className='font-bold'>Shop By Category</h1>
