@@ -22,7 +22,7 @@ const offers = [
 const Offers = () => {
   return (
     <div className="flex flex-col mt-10  gap-7 items-center">
-        <div className={`flex flex-col items-center rounded-xl gap-10 p-5 bg-[#f1f5e8] dark:bg-gray-600 w-full`}>
+        <div className={`flex flex-col items-center rounded-xl gap-10 p-5 bg-[#f1f5e8] dark:bg-slate-800 shadow-md w-full`}>
           <div>
             <h1 className="font-semibold text-xl mb-2">Delivery discount</h1>
             <p className="text-content">Buy our categorized discount products</p>
@@ -33,7 +33,7 @@ const Offers = () => {
             </button>
           </Link>
         </div>
-        <div className={`flex flex-col items-center rounded-xl gap-10 p-5 bg-[#fcf0eb] dark:bg-gray-600 w-full`}>
+        <div className={`flex flex-col items-center rounded-xl gap-10 p-5 bg-[#fcf0eb] dark:bg-slate-800 shadow-md w-full`}>
           <div>
             <h1 className="font-semibold text-xl mb-2">Monthly discount</h1>
             <p className="text-content">Buy our categorized discount products</p>
@@ -44,7 +44,7 @@ const Offers = () => {
             </button>
           </Link>
         </div>
-        <div className={`flex flex-col items-center rounded-xl gap-10 p-5 bg-[#f0f0d7] dark:bg-gray-600 w-full`}>
+        <div className={`flex flex-col items-center rounded-xl gap-10 p-5 bg-[#f0f0d7] dark:bg-slate-800 shadow-md w-full`}>
           <div>
             <h1 className="font-semibold text-xl mb-2">Daily discount</h1>
             <p className="text-content">Buy our categorized discount products</p>
