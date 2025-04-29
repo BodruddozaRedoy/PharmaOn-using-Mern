@@ -113,7 +113,7 @@ const MiddleNav = () => {
               tabIndex={0}
               className="card card-compact dropdown-content bg-accent z-[1] mt-3 w-52 shadow"
             >
-              <div className="card-body dark:bg-gray-800 rounded-xl">
+              <div className="card-body dark:bg-gray-800 dark:text-white rounded-xl">
                 <span className="text-lg font-bold">{cart.length} Items</span>
                 <span className="text-primary">
                   Subtotal: ${subtotal?.toFixed(2)}
